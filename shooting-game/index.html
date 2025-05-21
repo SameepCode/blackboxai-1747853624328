@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shooting Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    #gameCanvas {
+      background-color: #111;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+  <h1 class="text-4xl font-bold mb-6">Shooting Game</h1>
+  <canvas id="gameCanvas" width="800" height="500" class="shadow-lg"></canvas>
+  <div class="mt-6 flex space-x-6 text-lg">
+    <div>Score: <span id="score">0</span></div>
+    <div>Ammo: <span id="ammo">10</span></div>
+    <button id="reloadBtn" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-300 transition">Reload</button>
+  </div>
+  <div id="gameOver" class="hidden mt-6 text-2xl font-semibold text-red-500">Game Over! Press Reload to play again.</div>
+  <script src="main.js"></script>
+</body>
+</html>
